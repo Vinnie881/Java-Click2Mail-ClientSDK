@@ -9,7 +9,9 @@ import c2m.sendSettings;
 public class batch_simpleSend {
 
 	public static void main(String[] args) {
-	batchAPI p = new batchAPI("Vinnie881","ljfva09876FK",batchAPI.Mode.Stage);
+	string un = "MyUserName";
+	string pw = "MyPW";
+	batchAPI p = new batchAPI(un,pw,batchAPI.Mode.Stage);
 	sendSettings ss = new sendSettings("#10 Double Window", "Address on First Page", "Letter 8.5 x 11", "Next Day", "Full Color", "White 24#", "Printing both sides", "First Class");
 	job myJob = new job(ss, 1, 5);
 	myJob.addJobAddress("My Name", "ORG", "12345 Test St", "APT 3", "", "Oak Brook", "IL","60523", "", "");
